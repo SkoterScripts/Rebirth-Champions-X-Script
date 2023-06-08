@@ -712,6 +712,30 @@ end
 
 end)
 
+Tab2Section:NewToggle("Auto Rebirth (1N)", "Finish the obby automatically", function(state)
+
+    if state then
+
+_G.autorebirth53 = true
+
+while _G.autorebirth53 == true do
+
+local args = {[1] = 53}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(unpack(args))
+
+wait(2)
+
+end
+
+    else
+
+_G.autorebirth53 = false
+
+end
+
+end)
+
 Tab3Section:NewButton("Keyboard","Pc Like Keyboard",function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/Keyboard-FE/main/Protected%20(3).lua'),true))()
 end)
